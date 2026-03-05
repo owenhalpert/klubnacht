@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klubnacht Keyboard Lights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="light-canvas"></canvas>
+    <div class="hud" id="hud">
+      <div class="hud-header">
+        <div class="title-wrap">
+          <h1>KLUBNACHT</h1>
+          <p>Keyboard Lighting Performance Deck</p>
+        </div>
+        <button class="hud-toggle" id="hud-toggle" type="button" aria-expanded="true">
+          Minimize
+        </button>
+      </div>
+      <div class="preset-bar">
+        <span class="preset-label">PRESET</span>
+        <div class="preset-btns" id="preset-btns">
+          <button class="preset-btn active" data-preset="1">1</button>
+          <button class="preset-btn" data-preset="2">2</button>
+          <button class="preset-btn" data-preset="3">3</button>
+          <button class="preset-btn" data-preset="4">4</button>
+          <button class="preset-btn" data-preset="5">5</button>
+          <button class="preset-btn" data-preset="6">6</button>
+          <button class="preset-btn" data-preset="7">7</button>
+        </div>
+        <span class="preset-hint"><kbd>Tab</kbd> cycle</span>
+      </div>
+      <div class="scene-status">
+        <span>Scene</span>
+        <strong id="scene-name">Noir Pulse</strong>
+        <span class="scene-sep">·</span>
+        <span id="preset-vibe">TECHNO</span>
+      </div>
+      <div class="help">
+        <p><kbd>1–6</kbd> base scene</p>
+        <p><kbd>Q–P</kbd> row 1 effects</p>
+        <p><kbd>A–L</kbd> row 2 effects</p>
+      </div>
+      <div class="key-grid" id="key-grid"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
